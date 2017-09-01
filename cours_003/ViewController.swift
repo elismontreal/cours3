@@ -1,25 +1,22 @@
-//
-//  ViewController.swift
-//  cours_003
-//
-//  Created by eleves on 17-09-01.
-//  Copyright © 2017 eleves. All rights reserved.
-//
-
+//==========================================
 import UIKit
-
+//==========================================
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+    @IBOutlet weak var champ: UITextField!
+    
+    @IBAction func conversion(_ sender: UIButton) {
+        let leChamp = champ
+        let valeurCelsius = leChamp?.text
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        if valeurCelsius != "", let v = Double(valeurCelsius!){
+            let valeurFahrenheit = v * 1.8 + 32
+            leChamp?.text = String(valeurFahrenheit)
+            
+        }
+        
     }
-
+    
 
 }
-
+//==========================================
