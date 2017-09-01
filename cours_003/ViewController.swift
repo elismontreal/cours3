@@ -11,12 +11,11 @@ class ViewController: UIViewController {
 
         if valeurCelsius != "", let v = Double(valeurCelsius!){
             let valeurFahrenheit = v * 1.8 + 32
-            leChamp?.text = String(valeurFahrenheit)
+            leChamp?.text = String(format: "%.1f",valeurFahrenheit)
             
         }
         
     }
     
-
 }
 //==========================================
